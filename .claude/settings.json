@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\MAX GLOBAL TECH\\\\Desktop\\\\project\" | Select-Object Name, @{Name=\"Type\";Expression={if\\($_.PSIsContainer\\){\"Directory\"}else{\"File\"}}})",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\MAX GLOBAL TECH\\\\Desktop\\\\project\\\\src\" -Recurse -File | Select-Object -ExpandProperty FullName | ForEach-Object { $_.Replace\\(\"c:\\\\Users\\\\MAX GLOBAL TECH\\\\Desktop\\\\project\\\\\", \"\"\\) } | Sort-Object)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\MAX GLOBAL TECH\\\\Desktop\\\\project\" -File | Where-Object { $_.Name -match \"\\\\.\\(md|config|css|json\\)$\" })",
+      "Bash(dir /B /S)"
+    ]
+  }
+}
