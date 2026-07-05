@@ -83,7 +83,7 @@ export default function Login({ authError, onLogin, onSignUp, onForgotPassword }
 
             {isSignUp && (
               <div className="role-selector" style={{ display: 'flex', gap: '0.75rem', marginBottom: '1.5rem', justifyContent: 'center' }}>
-                {['donor', 'patient', 'admin'].map((role) => (
+                {['donor', 'patient'].map((role) => (
                   <button
                     key={role}
                     type="button"
